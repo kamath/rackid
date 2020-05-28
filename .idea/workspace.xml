@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84884461-04f1-4ea6-90e0-08b77f320893" name="Default Changelist" comment="Yuh" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1cMpw3Dq1gwZGwNDqGUVAhApFXq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+  </component>
+  <component name="RunManager" selected="npm.develop">
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84884461-04f1-4ea6-90e0-08b77f320893" name="Default Changelist" comment="" />
+      <created>1590348551457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590348551457</updated>
+      <workItem from="1590348560136" duration="49000" />
+      <workItem from="1590348793668" duration="2004000" />
+      <workItem from="1590350956007" duration="13089000" />
+      <workItem from="1590588156124" duration="4665000" />
+      <workItem from="1590596259610" duration="20634000" />
+    </task>
+    <task id="LOCAL-00001" summary="Yuh">
+      <created>1590625226988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590625226989</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Yuh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yuh" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2539" height="271" key="GridCell.Tab.0.bottom" timestamp="1590625257537">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2539" height="271" key="GridCell.Tab.0.bottom/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590625257537" />
+    <state width="2539" height="271" key="GridCell.Tab.0.center" timestamp="1590625257535">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2539" height="271" key="GridCell.Tab.0.center/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590625257535" />
+    <state width="2539" height="271" key="GridCell.Tab.0.left" timestamp="1590625257534">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2539" height="271" key="GridCell.Tab.0.left/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590625257534" />
+    <state width="2539" height="271" key="GridCell.Tab.0.right" timestamp="1590625257536">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2539" height="271" key="GridCell.Tab.0.right/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590625257536" />
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2" timestamp="1590625243759">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590625243759" />
+    <state x="1083" y="641" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590602629081">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1083" y="641" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590602629081" />
+    <state x="987" y="352" width="586" height="735" key="find.popup" timestamp="1590350364898">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="987" y="352" width="586" height="735" key="find.popup/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590350364898" />
+    <state x="945" y="345" key="run.anything.popup" timestamp="1590607380623">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="345" key="run.anything.popup/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590607380623" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1590599194076">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440/-2560.0.2560.1440@0.0.2560.1440" timestamp="1590599194076" />
+  </component>
+</project>
