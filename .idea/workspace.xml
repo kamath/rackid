@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84884461-04f1-4ea6-90e0-08b77f320893" name="Default Changelist" comment="Yuh" />
+    <list default="true" id="84884461-04f1-4ea6-90e0-08b77f320893" name="Default Changelist" comment="Yuh">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cMpw3Dq1gwZGwNDqGUVAhApFXq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -92,6 +98,7 @@
       <workItem from="1590350956007" duration="13089000" />
       <workItem from="1590588156124" duration="4665000" />
       <workItem from="1590596259610" duration="20634000" />
+      <workItem from="1590625441266" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="Yuh">
       <created>1590625226988</created>
