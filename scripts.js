@@ -39,12 +39,6 @@ move = (element_id, x, y) => {
 var run = () => {
     var svg = document.getElementById('animation')
     svg.innerHTML = ''
-    // window.table = {};
-    // // circle("circle1", "50", "50", "40", "green", "4", "yellow");
-    // window.table['circle1'] = easy_circle("50", "100", "40", "green");
-
-    // render(svg, window.table)
-    // setTimeout(() => move('circle1', 75, 250), 3000)
     console.log("WINDOW KEYS", window.keys)
     for(let [key, props] of Object.entries(window.made)) {
     	// var tag = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -58,9 +52,9 @@ var run = () => {
     }
 }
 
-var toggle = (element_id, inline) => {
-    var x = document.getElementById(element_id);
-    if (x.style.display === "none") {
+var toggle = (x, inline) => {
+	console.log(x, x.style.display)
+    if (x.style.display == "none") {
         if (inline)
             x.style.display = "inline-block";
         else
@@ -71,26 +65,71 @@ var toggle = (element_id, inline) => {
 }
 
 var showCode = () => {
-    // toggle("start", true);
-    toggle("main", false)
+    toggle(document.getElementById('start'), true);
+    toggle(document.getElementById('main'), false);
+
+    if(document.getElementById('showcode').innerText.indexOf('Code') > -1) {
+    	document.getElementById('showcode').innerText = document.getElementById('showcode').innerText.replace('Code', 'Animation')
+    }
+    else {
+    	document.getElementById('showcode').innerText = document.getElementById('showcode').innerText.replace('Animation', 'Code')
+    }
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-var addFields = (div_id) => {
-    div = document.getElementById('makefields_' + div_id)
-    field = document.getElementById('makecombo_' + div_id)
+var addFields = (div) => {
+    // div = document.getElementById('makefields_' + div_id)
+    console.log(div)
+    field = div.getElementsByClassName('codeblock')[0]
+    console.log(div, field)
 
-    console.log(div_id, div)
+    // console.log(div_id, div)
     div.innerHTML = ''
 
     window.structs[field.value].forEach(x => {
-        div.appendChild(document.createTextNode(' '+x[0] + ' (' + x[1] + '): '))
-        const textbox = document.createElement("input")
-        textbox.setAttribute('class', 'property')
-        textbox.setAttribute('property', x[0])
-        textbox.setAttribute('type', x[1])
-        div.appendChild(textbox)
+    	var property = x[0];
+        var type = x[1];
+
+        div.appendChild(document.createTextNode(' '+ property + ' (' + type + '): '))
+
+        var functions = window.functions['any']
+        if(window.functions.hasOwnProperty(type)) {
+        	functions = Object.assign(functions, window.functions[type])
+        }
+
+    	console.log("FUNCTIONS FOR", property, "THAT RETURN", type, "INCLUDE", functions)
+
+		// Combobox containing all the available structs to make
+	    combobox = document.createElement('select')
+	    // combobox.setAttribute('id', 'usefunc' + id)
+	    combobox.setAttribute('class', 'callfunc')
+	    // combobox.onchange = () => addFields(id)
+
+	    // For each element in the defined structs, add it as an option to the combobox
+	    for (let [x, _] of Object.entries(functions)) {
+	        option = document.createElement("option")
+	        option.appendChild(document.createTextNode(x))
+	        option.value = x
+	        combobox.appendChild(option)
+	    }
+
+	    div.appendChild(combobox)
+		for(let [func, _] of Object.entries(window.functions[type])) {
+			 console.log(func, _)
+		}
+
+        // else {
+        // 	console.log(property, '"'+type+'"', window.functions.hasOwnProperty(type), window.functions)
+        	// const textbox = document.createElement("input")
+	        // textbox.setAttribute('class', 'property')
+	        // textbox.setAttribute('property', property)
+	        // textbox.setAttribute('type', type)
+	        // div.appendChild(textbox)
+        // }
+
+        div.appendChild(document.createElement('br'))
+        div.appendChild(document.createElement('br'))
     })
 }
 
@@ -103,18 +142,19 @@ var delete_block = (div_id) => {
 var addMake = () => {
     const id = Object.keys(window.makes).length.toString()
 
-    parentDiv = document.createElement('div')
+    var parentDiv = document.createElement('div')
     parentDiv.setAttribute('class', 'codeblock make')
-    parentDiv.setAttribute('id', 'make_' + id)
 
     // Delete the node
     delete_node = document.createElement('a')
     delete_node.setAttribute('class', 'btn red')
     delete_node.appendChild(document.createTextNode('x'))
-    delete_node.onclick = () => delete_block('make_' + id)
+    delete_node.onclick = () => delete_block(delete_node)
     parentDiv.appendChild(delete_node)
 
-    parentDiv.appendChild(document.createElement('p').appendChild(document.createTextNode(" Make a ")))
+    const strong = document.createElement('b')
+    strong.appendChild(document.createTextNode(" MAKE a "))
+    parentDiv.appendChild(strong)
 
     // Combobox containing all the available structs to make
     combobox = document.createElement('select')
@@ -146,7 +186,7 @@ var addMake = () => {
     document.getElementById('blocks').appendChild(parentDiv);
     window.makes[id] = parentDiv
 
-    addFields(id, combobox)
+    addFields(parentDiv)
 
     console.log(document.getElementById('blocks'))
 }
@@ -167,12 +207,28 @@ var make = () => {
 }
 
 var ready = () => {
+	// DEFINED TYPES: 
+	/*
+	* number - typically an integer
+	* boolean - a boolean
+	* circle
+	*/
+
     window.structs = {
         'circle': [['cx', 'number'], ['cy', 'number'], ['r', 'number'], ['fill', 'color']],
         'rect': [['x', 'number'], ['y', 'number'], ['width', 'number'], ['height', 'number'], ['fill', 'color']]
     }
     window.makes = {}
     window.made = {}
+    window.functions = {
+    	'number': {'add': [[['x', 'number'], ['y', 'number']], (x, y) => {x + y}],
+    		'subtract': [[['x', 'number'], ['y', 'number']], (x, y) => {x - y}],
+    		'multiply': [[['x', 'number'], ['y', 'number']], (x, y) => {x * y}],
+    		'divide': [[['x', 'number'], ['y', 'number']], (x, y) => {x / y}]}, 
+    	'boolean': {'and': [[['x', 'boolean'], ['y', 'boolean']], (x, y) => {x && y}], 
+    		'or': [[['x', 'boolean'], ['y', 'boolean']], (x, y) => {x || y}]},
+    	'any': {'if': [[['cond', 'boolean'], ['true', 'any'], ['false', 'any']], (cond, ifTrue, ifFalse) => {(cond()) ? ifTrue() : ifFalse()}]}
+    	}
     showCode()
 }
 
